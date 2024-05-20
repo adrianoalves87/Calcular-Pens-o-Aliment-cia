@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pensão Alimentícia</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <section class="buckets">
+        <img src="./foto02.png" alt="">
+        <br>
+        <ul>
+            <li>
+                <div class="bucket">
+                    <form id="calcForm">
+                        <fieldset>
+                            <legend>Calculadora de Pensão Alimentícia</legend>
+                            <label for="renda">Renda Mensal (R$):</label>
+                            <input type="number" id="renda" name="renda" required>
+                            <label for="filhos">Número de Filhos:</label>
+                            <input type="number" id="filhos" name="filhos" required>
+                            <label for="percentual">Percentual de Pensão Alimentícia (%):</label>
+                            <input type="number" id="percentual" name="percentual" required>
+                            <div> <!-- Adiciona um contêiner div para agrupar os botões -->
+                                <button type="button" onclick="calcularPensao()">Calcular</button>
+                                <button type="reset" onclick="limparResultado()">Limpar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <p id="resultado">Resultado: </p>
+                    <button id="salvarBtn" style="display:none;" onclick="salvarResultado()">Salvar Resultado</button>
+                    <p id="aviso" class="aviso"></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <script src="./javascript.js"></script>
+    <script>
+        // Função para limpar o resultado
+        function limparResultado() {
+            document.getElementById("resultado").textContent = "Resultado: ";
+        }
+    </script>
+</body>
+</html>
