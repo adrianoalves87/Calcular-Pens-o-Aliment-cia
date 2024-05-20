@@ -52,12 +52,13 @@ button:hover {
 }
 
 #resultado {
-    font-size: 39px;
-    margin-top: 20px;
+    font-size: 35px;
+    margin-top: px;
 color: rgb(37, 145, 11);
 background: rgb(0, 0, 0);
 border-radius: 50px;
 }
+
 
 #salvarBtn {
     background-color: #008CBA;
